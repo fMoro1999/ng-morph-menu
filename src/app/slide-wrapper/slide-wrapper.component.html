@@ -1,0 +1,24 @@
+<div
+  class="slide-wrapper absolute p-4 shadow-md rounded opacity-0 pointer-events-none transition-all duration-300 cursor-auto"
+  [ngClass]="{
+    'opacity-100 pointer-events-auto': hovering === index,
+  }"
+  [style.top.px]="top"
+  [style.left.px]="left"
+  [ngStyle]="{
+    '--marker-left': markerLeft - 6 + 'px'
+  }"
+  [class.is-anchor-hovered]="hovering === index"
+>
+  <div
+    #content
+    class="transition-all duration-300"
+    [ngClass]="{
+      'transform-none': hovering === index || hovering === null,
+      '-translate-x-24': hovering !== null && hovering > index,
+      'translate-x-24': hovering !== null && hovering <= index
+    }"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.slide-wrapper {
+  &.is-anchor-hovered {
+    background-color: #fefefe;
+    &::before {
+      content: "▲";
+      position: absolute;
+      z-index: 1;
+      color: #fefefe;
+      font-size: medium;
+      transform: scaleY(0.6) translateY(-51px);
+      left: var(--marker-left);
+    }
+  }
+}

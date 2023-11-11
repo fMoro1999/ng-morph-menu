@@ -1,0 +1,33 @@
+<div class="bg-blue-500 p-4 main-container">
+  <div class="container mx-2 flex justify-between items-center">
+    <nav>
+      <ng-container
+        *ngFor="
+          let item of menuItems;
+          let i = index;
+          trackBy: trackByLabel;
+          let isFirst = first;
+          let isLast = last
+        "
+      >
+        <a
+          #anchor
+          (mouseover)="setPopover(i)"
+          (mouseleave)="onLeavePopover()"
+          class="pr-1 pl-1 pt-3 pb-3 cursor-default"
+        >
+          <span #label class="text-white"> {{ item.label }}</span>
+          <app-slide-wrapper
+            [index]="i"
+            [hovering]="hoveredId"
+            [top]="+anchor.offsetHeight * 1.15"
+            [left]="+anchor.offsetLeft + (isFirst ? 4 : 8)"
+            [markerLeft]="(+anchor.offsetWidth - (isFirst ? 4 : 8)) / 2"
+          >
+            <div [innerHTML]="item.content | safeHtml : 'html'"></div>
+          </app-slide-wrapper>
+        </a>
+      </ng-container>
+    </nav>
+  </div>
+</div>

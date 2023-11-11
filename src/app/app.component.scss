@@ -1,0 +1,11 @@
+.app {
+  background: url("../assets/svg/wave.svg") center/cover no-repeat;
+  /* You can adjust background properties to suit your needs */
+  /* background-size: cover; - to cover the entire container */
+  /* background-position: center; - to center the SVG */
+  /* background-repeat: no-repeat; - to prevent repeating the image */
+  .content {
+    height: 100vh;
+    padding: 10px;
+  }
+}
