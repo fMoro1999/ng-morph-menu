@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "awesome-menu:build:production"
+              "buildTarget": "awesome-menu:build:production"
             },
             "development": {
-              "browserTarget": "awesome-menu:build:development"
+              "buildTarget": "awesome-menu:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "awesome-menu:build"
+            "buildTarget": "awesome-menu:build"
           }
         },
         "test": {
