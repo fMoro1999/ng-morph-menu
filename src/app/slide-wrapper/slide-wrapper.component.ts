@@ -7,13 +7,12 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-slide-wrapper',
-  templateUrl: './slide-wrapper.component.html',
-  styleUrls: ['./slide-wrapper.component.scss'],
-  standalone: true,
-  imports: [NgClass, NgStyle],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-slide-wrapper',
+    templateUrl: './slide-wrapper.component.html',
+    styleUrls: ['./slide-wrapper.component.scss'],
+    imports: [NgClass, NgStyle],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None
 })
 export class SlideWrapperComponent {
   @Input({ required: true }) index!: number;

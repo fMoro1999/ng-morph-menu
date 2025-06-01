@@ -14,19 +14,18 @@ type MenuItem = {
 };
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  standalone: true,
-  imports: [
-    NgIf,
-    NgFor,
-    NgClass,
-    SlideWrapperComponent,
-    SafeHtmlPipe,
-    AsyncPipe,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    imports: [
+        NgIf,
+        NgFor,
+        NgClass,
+        SlideWrapperComponent,
+        SafeHtmlPipe,
+        AsyncPipe,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavbarComponent {
   hoveredId: number | null = null;
